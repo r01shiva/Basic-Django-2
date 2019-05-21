@@ -1,0 +1,62 @@
+{% extends "cleaning/header.html" %}
+{% load staticfiles %}
+{% block csshome %}
+    <style>
+        @media screen and (max-width: 1366px) {
+             .content{
+                margin-left:100px;
+                margin-right: 100px;
+                padding-top: 10px;
+                padding-left: 70px;
+                padding-right: 70px;
+                padding-bottom: 50px;
+                background-color: #EAEDED ;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            img{
+                max-height: 200px;
+                width: 400px;
+            }
+            .content{
+                margin-left:12px;
+                margin-right: 12px;
+                padding-top: 3px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 8px;
+                background-color: #EAEDED ;
+            }
+
+
+        }
+        .bg{
+            background-color: black;
+        }
+        .content h2{
+            color: #2C87BB;
+            font-family: 'Abel', sans-serif;
+        }
+        .content p{
+            color: #808B96  ;
+        }
+    </style>
+{% endblock %}
+{% block active %}
+    <p class="active">Home/About us</p>
+{% endblock %}
+{% block content %}
+    <div class="">
+    <div class="content">
+        <h2 style="text-align: center ;">Grand Mother Home Senses</h2>
+        <p>Grand Mother Home Senses is a leading organization involved in the area of Manufacturing and Trading a broad plethora of Glass Cleaner, Liquid Hand Wash, Toilet Cleaner, Liquid Phenyl, Cotton Mop, Floor Cleaning Brooms, etc.
+        A brand is not just a Logo, A Website or your business card, it is an experience.
+        So we are dealing in our own reputed brand BIKOL FRESH. It represents our success in this specific domain.
+        Our products are widely appreciated for effective performance and anti-bacterial properties and fragrance. In their development process, we assure that only top material is used by our professionals.
+        In order to attain the high level of customer satisfaction, we have developed for ourselves a huge and well facilitated infrastructural set up which is equipped with all the latest tools, technology and machinery. We can happily assert that we give you the best online shopping experience. Our reputation relies on your satisfaction, and for superior quality products, there is no more reliable place for you to shop online. So you will be safe in the knowledge that we offer the best. We are the one stop shop for your different requirements.
+        <p>Under the guidance of our mentor “Mr. Praveen Tiwari”, we have achieved a renowned place in the market. Their strong marketing instinct, well-versed knowledge and rich expertise are the key reasons responsible for our unbeatable success.</p>
+    </div>
+    </div>
+{% endblock %}
+
+

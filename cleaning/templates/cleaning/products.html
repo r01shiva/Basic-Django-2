@@ -1,0 +1,90 @@
+{% extends "cleaning/header.html" %}
+{% load staticfiles %}
+{% block csspro %}
+    <style>
+        a{
+            text-decoration: none ;
+        }
+        a p {
+            float:right;
+            color: #7CCB98;
+            font-size: 1.5em
+        }
+
+        @media screen and (max-width: 1366px) {
+             .mar{
+                    margin-left: 100px;
+                    margin-right: 200px;
+                    padding-right: 100px;
+                }
+            .image {
+                height: 260px;
+                width: 210px;
+            }
+            .bodypro{
+                margin: 50px 100px 0 100px;
+            }
+
+        }
+
+        @media screen and (max-width: 1100px) {
+
+             .mar{
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    padding-right: 15px;
+                }
+            .image {
+                height: 260px;
+                width: 210px;
+            }
+            .bodypro{
+                margin: 5px 10px 0 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 640px) {
+
+             .mar{
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    padding-right: 15px;
+                }
+            .image {
+                height: 260px;
+                width: 40%;
+            }
+            .bodypro{
+                margin: 5px 10px 0 10px;
+            }
+
+        }
+
+
+    </style>
+{% endblock %}
+{% block active %}
+    <p class="active">Home/Products</p>
+{% endblock %}
+{% block content %}
+    <div class="bodypro">
+    <div style=" color:#117A65;font-family: 'Abel', sans-serif;font-size: 20px;font-weight: bold">RETAIL & CONSUMER RATE OF PRODUCTS</div>
+    <br>
+    <br>
+    <div class="mar">
+
+    {% for a in all_products %}
+        <a href="{% url 'detailp' a.id %}">
+            <img src="{{ a.image.url }}"class="image">
+         <p>{{ a.name }}
+            <br>
+            </p>
+        </a>
+
+        <br>
+        <br>
+    {% endfor %}
+    </div>
+
+{% endblock %}

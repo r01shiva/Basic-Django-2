@@ -1,0 +1,11 @@
+.image {
+    height: 270px;
+    width: 200px;
+}
+.imgs {
+    padding: 14px 16px;
+    float: left;
+}
+h3{
+    text-transform: capitalize;
+}

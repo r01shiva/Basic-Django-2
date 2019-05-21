@@ -1,0 +1,139 @@
+{% extends "cleaning/header.html" %}
+{% load staticfiles %}
+{% block cssprod %}
+    <style>
+
+         td {
+             text-align: center;
+             color: #117A65;
+         }
+
+
+        .bb{
+            border-bottom: 1px solid grey;
+        }
+        .br{
+            border-right: 1px solid grey;
+        }
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+        }
+        h2,h3,h6{
+            color: #117A65;
+        }
+
+     @media screen and (max-width: 1366px) {
+         .bb{
+            margin: 100px;
+            background-color: White;
+        }
+        .content{
+            width: 55%;
+            float: right;
+            margin-top:20px;
+            margin-left: 30px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        p {
+            width: 50%;
+            color: #117A65;
+        }
+        .mbox{
+            width: 100%;
+            margin-top: 50px;
+            display: block;
+        }
+        table{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+        .w30{
+            width: 30%;
+        }
+        .w60{
+            width: 60%;
+        }
+        .bb2{
+             display:none;
+         }
+
+     }
+     @media screen and (max-width: 777px) {
+         .bb{
+            margin: 10px;
+            background-color: White;
+        }
+         .bb2{
+             display:none;
+         }
+
+     }
+     @media screen and (max-width: 640px) {
+         .bb{
+             display: none;
+         }
+         .bb2{
+             display: block;
+             margin-left: 20px;
+             margin-right: 20px;
+         }
+     }
+
+
+
+    </style>
+{% endblock %}
+{% block active %}
+    <p class="active">Home/Products/{{ product.name }}</p>
+{% endblock %}
+{% block detail %}
+    <div class="bb">
+        <div class="mbox">
+
+
+        <img src="{{ product.image.url }}" style="max-height: 300px">
+
+
+    <div class="content">
+    <h2>{{ product.name }}</h2>
+
+            <table>
+                <tbody >
+                <tr >
+                    <td class="bb br w30">Usage</td>
+                    <td class="bb w60">{{ product.usage }}</td>
+                </tr>
+                <tr >
+                    <td class="br bb w30">Quantity</td>
+                    <td class="bb w60">{{ product.quantity }}</td>
+                </tr>
+                <tr >
+                    <td class="bb br w30">Form</td>
+                    <td class="bb w60">{{ product.form }}</td>
+                </tr>
+                 <tr >
+                    <td class="br w30">Pack</td>
+                    <td class="w60">{{ product.pack }}</td>
+                </tr>
+                </tbody>
+            </table>
+        <h6>{{ product.description }}</h6>
+    </div>
+</div>
+</div>
+    <div class="bb2">
+    <h3>{{ product.name }}</h3>
+     <img src="{{ product.image.url }}" style="max-height: 450px;width: 350px">
+        <div style="padding: 5px 5px 5px 5px ;margin-top: 5px">
+    <h6>Usage:{{ product.usage }}</h6>
+        <h6>Quantity:{{ product.quantity }}</h6>
+    <h6>Form:{{ product.form }}</h6>
+            <h6>Pack:{{ product.pack }}</h6></div>
+    </div>
+
+{% endblock %}
